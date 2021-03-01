@@ -16,6 +16,7 @@
     }
 
     @include screen('desktop') {
+        padding: 24px 0;
         margin-right: 93px;
     }
 }
