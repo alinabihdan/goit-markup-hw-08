@@ -1,0 +1,50 @@
+body {
+    font-family: var(--text-font);
+    background-color: var(--main-light-color);
+    color: var(--primary-text-color);
+    letter-spacing: 0.03em;
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.section-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+@include screen('desktop') {
+    .section-padding {
+        padding-top: 94px;
+        padding-bottom: 94px; 
+    }
+}

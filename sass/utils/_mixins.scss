@@ -1,0 +1,62 @@
+
+@mixin flexcenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@mixin generateIcons($iconList) {
+    @each $iconName in $iconList {
+        .icon-#{$iconName}::before {
+            background-image:  url('../images/#{$iconName}.svg');
+        }
+    }
+    
+}
+
+@mixin сentered-xy() { 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin social-link($bgcolor, $color) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $bgcolor;
+    color: $color;
+    transition: color 250ms var(--standart-cubic), background-color 250ms var(--standart-cubic);
+}
+
+
+@mixin screen($size) {
+    $desktop: '(min-width: 1200px)'; // Переменная со значением desktop размера
+    $tablet: '(min-width: 768px)'; // Переменная со значением tablet размера
+    @if $size == desktop {
+        @media only screen and #{$desktop} {
+            @content;
+        }
+    } @else if $size == tablet {
+        @media only screen and #{$tablet} {
+            @content;
+        }
+    }
+}
+
+// Исспользование
+// .wrapper {
+//   margin: 0 auto;
+//   width: 100%;
+//   @include screen('tablet') {
+//     width: 90%;
+//   }
+//   @include screen('desktop') {
+//     width: 85%;
+//   }
+// }

@@ -1,0 +1,25 @@
+.social-list {
+    display: flex;
+    justify-content: center;
+
+    &__icon {
+        fill: currentColor;
+    }
+}
+
+.social-list__item {
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.social-list__link {
+    @include social-link(transparent, var(--icons-color));
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        color: var(--main-light-color);
+    }
+}

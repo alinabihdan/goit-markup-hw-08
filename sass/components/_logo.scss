@@ -1,0 +1,30 @@
+// logo
+
+.logo {
+    display: inline-block;
+    font-family: var(--logo-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+
+.logo--top {
+    padding: 16px 0;
+}
+
+.logo .web {
+    color: var(--accent-color);
+}
+
+.logo .studio {
+    color: var(--black-color);
+}
+
+.logo .studio--footer {
+    color: var(--main-light-color)
+}
+
+
+.adress .logo {
+    margin-bottom: 20px;
+}

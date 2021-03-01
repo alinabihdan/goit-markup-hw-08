@@ -1,0 +1,16 @@
+:root {
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color: #2196F3;
+    --main-light-color: #ffffff;
+    --accent-bg-color: #F5F4FA; 
+    --footer-bg-color: #2F303A;
+    --footer-text-color: rgba(255, 255, 255, 0.6);
+    --black-color: #000000;
+    --icons-color: #AFB1B8;
+    --standart-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+    --text-font: "Roboto", sans-serif;
+    --logo-font: "Raleway", sans-serif;
+}
+
+$featuresIcons: 'antenna', 'clock', 'diagram', 'astronaut';

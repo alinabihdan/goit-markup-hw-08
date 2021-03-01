@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+    .page-header & {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+
+    @include screen('tablet') {
+        width: 768px;
+    }
+
+    @include screen('desktop') {
+        width: 1200px;
+    }
+
+}
+
+
