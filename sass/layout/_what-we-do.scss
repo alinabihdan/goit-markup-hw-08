@@ -3,3 +3,42 @@
         display: none;
     }
 }
+
+@include screen('desktop') {
+    .what-we-do {
+        text-align: center;
+        padding-bottom: 94px;
+    }
+
+    .what-we-do__list {
+        display: flex;
+    }
+
+    .what-we-do__item {
+        position: relative;
+    }
+
+    .what-we-do__item + .what-we-do__item {
+        margin-left: 30px;
+    }
+
+
+    .service-description {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 27px 15px;
+
+        background-color: rgba(47, 48, 58, 0.8);
+
+        &__text {
+            margin-top: 0;
+            margin-bottom: 0;
+
+            font-weight: 700;
+            line-height: 1.14;
+            text-transform: uppercase;
+            color: var(--main-light-color); 
+        }
+    }
+}

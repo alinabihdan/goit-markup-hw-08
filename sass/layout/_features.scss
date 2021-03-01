@@ -23,7 +23,6 @@
     }
 }
 
-
 .features__title {
     margin-bottom: 10px;
     color: var(--title-text-color);
@@ -35,4 +34,30 @@
 
 .features__text {
     line-height: 1.71;
+}
+
+.features__list {
+    display: flex;
+}
+
+@media screen and (min-width: 76px) and (max-width: 1199px) {
+    .features__list {
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    .features__item {
+        margin: 15px;
+        width: calc((100% - 4 * 15px) / 2);
+    }
+}
+
+@include screen('desktop') {
+    .features__item {
+        width: 270px;
+    }
+
+    .features__item + .features__item {
+        margin-left: 30px;
+    }
 }

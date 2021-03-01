@@ -41,11 +41,8 @@
         display: flex;
     }
     
-    .contacts__item {
-        margin-bottom: 0;
-    }
-
     .contacts__item:not(:last-child) {
+        margin-bottom: 0;
         margin-right: 50px;
     }
 
@@ -55,6 +52,3 @@
     }
 }
 
-
-// padding-top: 32px;
-// padding-bottom: 32px;

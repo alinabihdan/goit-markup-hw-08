@@ -38,3 +38,30 @@
         margin-bottom: 30px;
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .team-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    .team-list__item {
+        margin: 15px;
+        flex-basis:  calc((100% - 4 * 15px) / 2);;
+    }
+}
+
+@include screen('desktop') {
+    .team-list {
+        display: flex;
+    }
+
+    .team-list__item {
+        width: 270px;
+    }
+
+    .team-list__item + .team-list__item {
+        margin-left: 30px;
+    }
+}

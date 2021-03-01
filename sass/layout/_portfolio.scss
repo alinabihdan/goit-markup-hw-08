@@ -23,6 +23,17 @@
 }
 
 
+@include screen('tablet') {
+    .button-list {
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .button-list__item +  .button-list__item {
+        margin-left: 8px;
+    }    
+}
+
 .portfolio__button {
     cursor: pointer;
     padding: 6px 22px;
@@ -121,8 +132,6 @@
 
 }
 
-
-
 @media screen and (max-width: 430px) {
     .overlay {
         padding: 25px 20px;
@@ -140,5 +149,24 @@
 
     .overlay__text {
         font-size: 14px;
+    }
+}
+
+@include screen('tablet') {
+    .portfolio__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    .portfolio__item {
+        margin: 15px;
+        flex-basis: calc((100% - 4 * 15px) / 2);
+    }
+}
+
+@include screen('desktop') {
+    .portfolio__item {
+        flex-basis: calc((100% - 6 * 15px) / 3);
     }
 }

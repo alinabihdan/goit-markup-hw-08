@@ -21,10 +21,23 @@
 
     @include screen('tablet') {
         width: 768px;
+
+        .footer & {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: baseline;
+         
+        }
+
     }
 
     @include screen('desktop') {
         width: 1200px;
+
+        .footer & {
+            justify-content: flex-start;
+        }
     }
 
 }

@@ -1,5 +1,6 @@
 .footer {
     background-color: var(--footer-bg-color);
+    padding: 60px 0;
 }
 
 @media screen and (max-width: 1199px) {
@@ -52,6 +53,7 @@
 
 
 // JOIN
+
 
 .join__title,
 .subscribe__title {
@@ -117,5 +119,24 @@
     & .subscribe__icon {
         fill: currentColor;
         margin-left: 10px;
+    }
+}
+
+
+@include screen('desktop') {
+    .join {
+        margin-left: 70px;
+    }
+
+    .subscribe {
+        margin-left: auto;
+    }
+
+    .subscribe__form {
+        display: flex;
+    }
+
+    .subscribe__button {
+        margin-left: 12px;
     }
 }
