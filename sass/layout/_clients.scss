@@ -2,43 +2,45 @@
     text-align: center;
 }
 
+.clients-list__icon {
+    fill: currentColor;
+}
+
+
 .clients-list {
+    display: flex;
 
     @media screen and (max-width: 1199px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: -15px;
-    }
-
-    &__icon {
-        fill: currentColor;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: -15px;  
     }
 }
-
-@media screen and (max-width: 1199px) {
-    .clients-list__item {
-        margin: 15px; 
-    }
-}
-
+    
 .clients-list__item {
-    width: 170px;
+    margin: 15px;
+    width: calc((100% - 15px * 4) / 2);
     height: 90px;
-}
+    
+    @include screen('tablet') {
+        width: calc((100% - 15px * 6) / 3);
+    }
 
+    @include screen('desktop') {
+        width: calc((100% - 15px * 12) / 6);
+    }
+}
+  
 .clients-list__link {
     @include flexcenter();
-    
     height: 100%;
     width: 100%;
     cursor: pointer;
     border: 1px solid rgba(175, 177, 184, 1);
     border-radius: 4px;
-    
     color: var(--icons-color);
     transition: color 250ms var(--standart-cubic), border-color 250ms var(--standart-cubic);
-
+    
     &:hover,
     &:focus {
         color: var(--accent-color);

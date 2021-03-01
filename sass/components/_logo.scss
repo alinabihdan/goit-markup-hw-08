@@ -10,6 +10,14 @@
 
 .logo--top {
     padding: 16px 0;
+
+    @include screen('tablet') {
+        margin-right: 88px;
+    }
+
+    @include screen('desktop') {
+        margin-right: 93px;
+    }
 }
 
 .logo .web {
@@ -28,3 +36,4 @@
 .adress .logo {
     margin-bottom: 20px;
 }
+
