@@ -5,6 +5,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  padding: 93px 15px;
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -19,9 +21,8 @@
 }
 
 .modal {
-  @include сentered-xy();
-  padding: 40px;
-  min-width: 528px;
+  padding: 10px;
+  max-width: 450px;
   min-height: 581px;
   background-color: var(--main-light-color);
   opacity: 1;
@@ -153,8 +154,7 @@
 
 .agreement__text {
   @include flexcenter();
-
-  text-align: center;
+  width: 100%;
   margin-bottom: 30px;
 
   font-size: 14px;
@@ -174,7 +174,7 @@
 }
 
 .agreement__link {
-  display: inline-block;
+  display: block;
   text-decoration: underline;
   color: var(--accent-color);
   margin-left: 3px;
@@ -201,3 +201,5 @@
   background-color: var(--accent-color);
   border-color: var(--accent-color);
 }
+
+//   @include сentered-xy();
