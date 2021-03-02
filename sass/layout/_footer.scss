@@ -88,7 +88,6 @@
 
 .subscribe__input {
   width: 100%;
-  max-width: 358px;
   height: 50px;
   padding: 15px 16px;
   background-color: transparent;
@@ -116,6 +115,12 @@
   }
 }
 
+@include screen("tablet") {
+  .subscribe__input {
+    width: 450px;
+  }
+}
+
 @include screen("desktop") {
   .join {
     margin-left: 70px;
@@ -123,6 +128,10 @@
 
   .subscribe {
     margin-left: auto;
+  }
+
+  .subscribe__input {
+    width: 358px;
   }
 
   .subscribe__form {

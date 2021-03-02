@@ -832,7 +832,6 @@ body.modal-open {
 
 .subscribe__input {
   width: 100%;
-  max-width: 358px;
   height: 50px;
   padding: 15px 16px;
   background-color: transparent;
@@ -860,12 +859,21 @@ body.modal-open {
   margin-left: 10px;
 }
 
+@media only screen and (min-width: 768px) {
+  .subscribe__input {
+    width: 450px;
+  }
+}
+
 @media only screen and (min-width: 1200px) {
   .join {
     margin-left: 70px;
   }
   .subscribe {
     margin-left: auto;
+  }
+  .subscribe__input {
+    width: 358px;
   }
   .subscribe__form {
     display: flex;
