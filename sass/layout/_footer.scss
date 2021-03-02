@@ -1,142 +1,135 @@
 .footer {
-    background-color: var(--footer-bg-color);
-    padding: 60px 0;
+  background-color: var(--footer-bg-color);
+  padding: 60px 0;
 }
 
 @media screen and (max-width: 1199px) {
-    .adress,
-    .join,
-    .subscribe {
-        text-align: center;
-    }
+  .adress,
+  .join,
+  .subscribe {
+    text-align: center;
+  }
 
-    .adress,
-    .join {
-        margin-bottom: 60px;
-    }
+  .adress,
+  .join {
+    margin-bottom: 60px;
+  }
 
-    .subscribe__form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 450px;
-    }
+  .subscribe__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+  }
 
-    .subscribe__input {
-        margin-bottom: 20px;
-    }
+  .subscribe__input {
+    margin-bottom: 20px;
+  }
 }
 
-
-
 .adress__item {
-
-    &:not(:last-child) {
-        margin-bottom: 9px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .adress__link {
-    line-height: 1.71;
-    color: var(--footer-text-color);
-    transition: color 250ms var(--standart-cubic);
+  line-height: 1.71;
+  color: var(--footer-text-color);
+  transition: color 250ms var(--standart-cubic);
 
-    &--light {
-        color: var(--main-light-color);
-    }
+  &--light {
+    color: var(--main-light-color);
+  }
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
-
 
 // JOIN
 
-
 .join__title,
 .subscribe__title {
-    font-weight: 700;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: var(--main-light-color);
-    margin-top: 0;
-    margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--main-light-color);
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .join-list {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    &__icon {
-        fill: currentColor;
-    }
+  &__icon {
+    fill: currentColor;
+  }
 }
 
 .join-list__item {
-
-    &:not(:last-child) {
-        margin-right: 10px;
-    }
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 .join-list__link {
+  @include social-link(rgba(255, 255, 255, 0.1), var(--main-light-color));
 
-   @include social-link(rgba(255, 255, 255, 0.1), var(--main-light-color));
-   
-   &:hover,
-   &:focus {
-    background-color: var(--accent-color);   
-   }   
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
 // SUBSCRIBE
 
 .subscribe__input {
-    width: 358px;
-    height: 50px;
-    padding: 15px 16px;
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    outline: none;
+  width: 100%;
+  max-width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: none;
 
-    font-size: 16px;
-    line-height: 1.25;
-    color: var(--accent-bg-color);
-    transition: border-color 250ms var(--standart-cubic);
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--accent-bg-color);
+  transition: border-color 250ms var(--standart-cubic);
 
-    &:hover,
-    &:focus {
-        border-color: var(--accent-color);  
-    }
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
 .subscribe__button {
-    @include flexcenter();
+  @include flexcenter();
 
-    & .subscribe__icon {
-        fill: currentColor;
-        margin-left: 10px;
-    }
+  & .subscribe__icon {
+    fill: currentColor;
+    margin-left: 10px;
+  }
 }
 
+@include screen("desktop") {
+  .join {
+    margin-left: 70px;
+  }
 
-@include screen('desktop') {
-    .join {
-        margin-left: 70px;
-    }
+  .subscribe {
+    margin-left: auto;
+  }
 
-    .subscribe {
-        margin-left: auto;
-    }
+  .subscribe__form {
+    display: flex;
+  }
 
-    .subscribe__form {
-        display: flex;
-    }
-
-    .subscribe__button {
-        margin-left: 12px;
-    }
+  .subscribe__button {
+    margin-left: 12px;
+  }
 }

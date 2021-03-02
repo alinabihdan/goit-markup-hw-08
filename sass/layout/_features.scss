@@ -1,63 +1,63 @@
-
 .features__item {
-    &::before {
-        content: '';
-        display: block;
-        height: 120px;
-        background-color: var(--accent-bg-color);
-        border-radius: 4px;
-        margin-bottom: 30px;
-        background-repeat: no-repeat;
-        background-size: 70px 70px;
-        background-position: center;
-    }
+  &::before {
+    content: "";
+    display: block;
+    height: 120px;
+    background-color: var(--accent-bg-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
+    background-position: center;
+  }
 }
 
 @include generateIcons($featuresIcons);
 
-@media screen and (max-width:767px) {
-    .features__item {
-        width: 100%;
-        max-width: 480px;
-        margin-bottom: 30px;
-    }
+@media screen and (max-width: 767px) {
+  .features__item {
+    width: 100%;
+    max-width: 480px;
+    margin-bottom: 30px;
+  }
 }
 
 .features__title {
-    margin-bottom: 10px;
-    color: var(--title-text-color);
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1.17;
-    text-align: center;
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.17;
+  text-align: center;
 }
 
 .features__text {
-    line-height: 1.71;
+  line-height: 1.71;
 }
 
-.features__list {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .features__list {
     display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  .features__item {
+    margin: 15px;
+    width: calc((100% - 4 * 15px) / 2);
+  }
 }
 
-@media screen and (min-width: 76px) and (max-width: 1199px) {
-    .features__list {
-        flex-wrap: wrap;
-        margin: -15px;
-    }
+@include screen("desktop") {
+  .features__list {
+    display: flex;
+  }
 
-    .features__item {
-        margin: 15px;
-        width: calc((100% - 4 * 15px) / 2);
-    }
-}
+  .features__item {
+    width: 270px;
+  }
 
-@include screen('desktop') {
-    .features__item {
-        width: 270px;
-    }
-
-    .features__item + .features__item {
-        margin-left: 30px;
-    }
+  .features__item + .features__item {
+    margin-left: 30px;
+  }
 }
