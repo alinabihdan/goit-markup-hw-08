@@ -231,4 +231,13 @@
     min-width: 528px;
     min-height: 581px;
   }
+
+  .agreement {
+    justify-content: center;
+  }
+
+  .agreement__text,
+  .agreement__link {
+    font-size: 14px;
+  }
 }
