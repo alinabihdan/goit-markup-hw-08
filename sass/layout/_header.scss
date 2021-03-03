@@ -14,15 +14,14 @@
   }
 
   .mobile-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 50%;
+    left: 0;
     z-index: 10;
-    width: 100%;
-    max-width: 480px;
+    width: 100vw;
     height: 100vh;
 
-    transform: translateX(-50%) translateY(-110%);
+    transform: scale(0);
     background-color: #fff;
     padding-top: 6vh;
     padding-left: 7vw;
@@ -30,11 +29,11 @@
     overflow-y: scroll;
     // padding: 48px 0px 10px 40px;
 
-    transition: transform 250ms linear;
+    transition: transform 250ms var(--standart-cubic);
   }
 
   .mobile-menu.is-open {
-    transform: translateX(-50%) translateY(0);
+    transform: scale(1);
   }
 
   .mobile-menu__close-button {

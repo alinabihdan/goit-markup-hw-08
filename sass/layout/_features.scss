@@ -48,6 +48,12 @@
   }
 }
 
+@include screen("tablet") {
+  .features__title {
+    text-align: left;
+  }
+}
+
 @include screen("desktop") {
   .features__list {
     display: flex;
